@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+:root {
+    --background-color: #FFFFFF;
+    --Stone-100: #F3E6D8;
+    --Stone-150: #E4DED8;
+    --Stone-600: #5F574E;
+    --Stone-900: #302D2C;
+    --Brown-800: #854632;
+    --Rose-800: #7B284F;
+    --Rose-50: #FFF5FA;
+
+    --main-font:'Young Serif', serif;
+    --secondary-font: 'Outfit', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background-color);
+}
+
+/* MAIN --------------------- */
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.text__content {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 2rem;
+    gap: 2rem 0;
+    font-family: var(--secondary-font);
+}
+
+.title {
+    font-size: 2.3em;
+    font-family: var(--main-font);
+    color: var(--Stone-900);
+    font-weight: 400;
+}
+
+.description {
+    font-size: 1em;
+    color: var(--Stone-600);
+    font-family: var(--secondary-font);
+
+}
+
+.Preparation {
+    background: var(--Rose-50);
+    margin: 0 2rem 2rem 2rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.preparation__title {
+    font-size: 1.3em;
+    font-family: var(--secondary-font);
+    color: var(--Rose-800);
+    font-weight: 600;
+}
+
+.preparation__list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    font-family: var(--secondary-font);
+}
+
+.list__item__p {
+    padding-left: 1rem;
+    color: var(--Stone-600);
+    font-weight: 400;
+}
+
+.bold__text {
+    color: var(--Stone-600);
+    font-weight: 700;
+}
+
+.section {
+    padding: 2rem;
+}
+
+.titles {
+    font-size: 1.8em;
+    font-family: var(--main-font);
+    color: var(--Brown-800);
+    font-weight: 400;
+}
+
+.ingredients__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    font-family: var(--secondary-font);
+}
+
+.list__item {
+    padding-left: 1.5rem;
+    color: var(--Stone-600);
+    font-weight: 400;
+}
+
+/* MARKER --------------------- */
+
+ul.marker__ul {
+    counter-reset: item;
+    list-style: none;
+    padding-left: 0;
+}
+li.marker {
+    counter-increment: item;
+    position: relative;
+    padding-left: 2em;
+}
+li.marker::before {
+    content: counter(item) ".";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    color: var(--Brown-800);
+}
+
+/* TABLE --------------------- */
+
+.section__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.table__text {
+    font-family: var(--secondary-font);
+    color: var(--Stone-600);
+    font-size: 1em;
+}
+
+.table__value {
+    font-family: var(--secondary-font);
+    color: var(--Brown-800);
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.table__text,
+.table__value {
+    padding: 1rem 2rem;
+    text-align: left;
+    border-bottom: 1px solid var(--Stone-150);
+}
+
+.table__line {
+    border-bottom: none;
+}
+
+/* DIVIDER --------------------- */
+
+.divider {
+    border: none;
+    height: 1px;
+    background-color: var(--Stone-150);
+    margin: 0 20px;
+}
+
+/* FOOTER --------------------- */
+
+.attribution { 
+    font-size: 12px; 
+    text-align: center;
+    font-family: var(--secondary-font);
+    padding: 4rem 2rem 2rem 2rem;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+@media (min-width: 740px) {
+     body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: var(--Stone-100);
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 1.5rem;
+        padding: 1rem 1rem 0 1rem;
+        background-color: var(--background-color);
+        width: 70%;
+        margin-top: 5rem;
+    }
+
+    .food__image {
+        border-radius: 2rem;
+        padding: 1.5rem;
+    }
+}
+
+@media (min-width: 1440px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: var(--Stone-100);
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 1.5rem;
+        padding: 1rem 1rem 0 1rem;
+        background-color: var(--background-color);
+        width: 45%;
+        margin-top: 5rem;
+    }
+
+    .food__image {
+        border-radius: 2.5rem;
+    }
+}
